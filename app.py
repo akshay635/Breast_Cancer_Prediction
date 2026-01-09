@@ -12,9 +12,9 @@ import streamlit as st
 import json
 
 
-rf = joblib.load("C:/Users/aksha/breast_cancer_project/final_random_forest.joblib")
+rf = joblib.load("final_random_forest.joblib")
 
-dt = joblib.load("C:/Users/aksha/breast_cancer_project/final_decision_tree.joblib")
+dt = joblib.load("final_decision_tree.joblib")
 
 common_features = ['worst concavity', 'mean radius', 'worst compactness', 'mean area']
 
@@ -84,4 +84,5 @@ if submitted:
     
     
     st.write(f'pred_proba_malignant: {pred_proba_malignant:.2%}')
+
     st.write(f'pred_proba_benign: {pred_proba_benign:.2%}')
